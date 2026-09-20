@@ -24,6 +24,11 @@ const userSchema = new mongoose.Schema(
       trim: true,
       index: true,
     },
+    age :{
+      type : Number,
+      trim : true,
+      required : [true, "age must be required"]
+    },
     avatar: {
       type: String, // we will take it from cloudinary
       required: [true, "avatar must be required "],

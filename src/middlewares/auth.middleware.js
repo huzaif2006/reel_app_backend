@@ -11,6 +11,8 @@ export const verifyJWT = (req, res, next) => {
     }
 
     const userInfo = jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
+  
+    
 
     if (!userInfo) {
       return res.status(401).json({
